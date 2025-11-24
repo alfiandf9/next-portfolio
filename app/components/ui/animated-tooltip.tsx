@@ -81,14 +81,19 @@ export const AnimatedTooltip = ({
             )}
           </AnimatePresence>
 
-          <a href={item?.href} target="_blank" rel="noopener noreferrer">
+          <a
+            href={item?.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${item.name} profile: ${item.designation}`}
+          >
             <Image
               onMouseMove={handleMouseMove}
               height={100}
               width={100}
               src={item.image}
               alt={item.name}
-              className="relative !m-0 h-10 w-10 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
+              className="relative !m-0 h-10 w-10 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105 dark:invert"
             />
           </a>
         </div>
