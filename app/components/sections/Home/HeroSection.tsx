@@ -26,7 +26,7 @@ const heroIcon = [
     name: "Email",
     designation: "Muhammad Alfian Dwi Fantara",
     image: "/icons/email.png",
-    href: "mailto:alfiandwi48@gmail.com",
+    href: "mailto:alfian.fantara@gmail.com",
   },
 ];
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
             </div>
             <div className="relative h-full w-full overflow-hidden rounded-full border-8 border-transparent bg-white/60 ring-2 ring-emerald-200/60 shadow-[0_20px_60px_-25px_rgba(16,185,129,0.4)] backdrop-blur-sm dark:bg-neutral-900/60 dark:ring-emerald-300/35">
               <Image
-                src={"/images/portrait-4.png"}
+                src={"/images/portrait.png"}
                 alt="my-portrait"
                 fill
                 sizes="(max-width: 768px) 192px, 288px"
@@ -86,7 +86,7 @@ const HeroSection = () => {
             <a
               href="/files/cv_muhammad_alfian_df.pdf"
               download
-              className="group relative overflow-hidden rounded-full border border-neutral-300 px-6 py-2 text-sm font-semibold text-neutral-700 transition hover:border-emerald-400 hover:text-emerald-600 dark:border-neutral-700 dark:text-neutral-200"
+              className="group relative overflow-hidden rounded-full border border-neutral-300 px-6 py-2 text-sm font-semibold text-neutral-700 transition hover:border-emerald-400 hover:text-emerald-600 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] dark:border-neutral-700 dark:text-neutral-200 dark:hover:shadow-[0_0_30px_rgba(16,185,129,0.3)] dark:hover:text-emerald-300 dark:hover:border-emerald-500"
             >
               <span className="relative">Download CV</span>
             </a>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { motion, useReducedMotion, type Variants } from "motion/react";
@@ -54,15 +54,11 @@ export const ProcessSteps = ({ steps }: { steps: Step[] }) => {
             onFocus={() => setActiveIndex(index)}
             onBlur={() => setActiveIndex(null)}
             tabIndex={0}
-            className={`relative flex flex-col gap-4 rounded-3xl border border-black/5 bg-white/70 p-6 shadow-[0_12px_40px_rgba(15,15,15,0.05)] outline-none transition-all duration-500 dark:border-white/10 dark:bg-neutral-900/70 dark:shadow-[0_0_0_1px_rgba(52,211,153,0.25),0_0_28px_rgba(52,211,153,0.12)] md:flex-row md:items-center md:gap-8 ${
+            className={`relative flex flex-col gap-4 rounded-3xl border border-black/5 bg-white/70 p-6 shadow-[0_12px_40px_rgba(15,15,15,0.05)] outline-none transition-all duration-500 dark:border-white/10 dark:bg-neutral-900/70 md:flex-row md:items-center md:gap-8 ${
               isFocused
-                ? "shadow-[0_18px_50px_rgba(15,15,15,0.12)] md:scale-[1.01] focus-visible:ring-2 focus-visible:ring-emerald-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-neutral-900"
+                ? "shadow-[0_18px_50px_rgba(15,15,15,0.12)] md:scale-[1.01] focus-visible:ring-2 focus-visible:ring-emerald-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:shadow-[0_0_0_1px_rgba(52,211,153,0.25),0_0_28px_rgba(52,211,153,0.12)] dark:focus-visible:ring-offset-neutral-900"
                 : "focus-visible:ring-2 focus-visible:ring-emerald-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-neutral-900"
-            } ${
-              isDimmed
-                ? "md:scale-[0.99] md:opacity-40 md:blur-[1px]"
-                : ""
-            }`}
+            } ${isDimmed ? "md:scale-[0.99] md:opacity-40 md:blur-[1px]" : ""}`}
             variants={itemVariants}
           >
             <div className="flex items-center gap-3">

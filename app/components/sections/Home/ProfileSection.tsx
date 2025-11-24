@@ -1,9 +1,29 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { MapPin, Mail, Calendar } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 import { SectionReveal } from "@/app/components/ui/section-reveal";
 
+const profileImages = [
+  "/images/profile.jpg",
+  "/images/profile-2.jpg",
+  "/images/profile-3.jpg",
+];
+
 const ProfileSection = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % profileImages.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <SectionReveal variant="fadeRight">
       <section
@@ -14,15 +34,41 @@ const ProfileSection = () => {
           {/* Photo Side */}
           <div className="order-2 md:order-1">
             <div className="relative mx-auto aspect-square max-w-sm overflow-hidden rounded-3xl border border-black/5 bg-neutral-100 shadow-2xl dark:border-white/10 dark:bg-neutral-800">
-              <Image
-                src="/images/profile.jpg"
-                alt="Muhammad Alfian Dwi Fantara"
-                fill
-                className="object-cover"
-                quality={95}
-                sizes="(max-width: 768px) 100vw, 384px"
-                priority
-              />
+              {/* Preload all images */}
+              {profileImages.map((src, index) => (
+                <div
+                  key={src}
+                  className={`absolute inset-0 transition-opacity duration-700 ${
+                    index === currentImage ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <Image
+                    src={src}
+                    alt="Muhammad Alfian Dwi Fantara"
+                    fill
+                    className="object-cover"
+                    quality={95}
+                    sizes="(max-width: 768px) 100vw, 384px"
+                    priority
+                  />
+                </div>
+              ))}
+
+              {/* Navigation dots */}
+              <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+                {profileImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImage(index)}
+                    className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                      index === currentImage
+                        ? "w-6 bg-emerald-500"
+                        : "bg-white/60 hover:bg-white/80"
+                    }`}
+                    aria-label={`View photo ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
@@ -50,8 +96,8 @@ const ProfileSection = () => {
                 before I code—making sure the foundation is solid.
               </p>
               <p>
-                Off the keyboard, I&apos;m gaming, walking the city, hunting street
-                food, or just chilling and enjoying the moment.
+                Off the keyboard, I&apos;m gaming, walking the city, hunting
+                street food, or just chilling and enjoying the moment.
               </p>
             </div>
 

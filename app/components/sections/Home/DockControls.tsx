@@ -23,21 +23,21 @@ const DockControls = () => {
     { title: "Home", icon: <HomeIcon className="h-4 w-4" />, href: "#home" },
     { title: "About", icon: <User2Icon className="h-4 w-4" />, href: "#about" },
     {
+      title: "Experience",
+      icon: <Layers3Icon className="h-4 w-4" />,
+      href: "#experience",
+    },
+    { title: "Projects", icon: <BriefcaseIcon className="h-4 w-4" />, href: "#projects" },
+    { title: "Tech", icon: <FolderGit2Icon className="h-4 w-4" />, href: "#tech" },
+    {
       title: "Capabilities",
       icon: <Layers3Icon className="h-4 w-4" />,
       href: "#capabilities",
     },
-    { title: "Tech", icon: <FolderGit2Icon className="h-4 w-4" />, href: "#tech" },
     {
       title: "Process",
       icon: <WorkflowIcon className="h-4 w-4" />,
       href: "#process",
-    },
-    { title: "Projects", icon: <BriefcaseIcon className="h-4 w-4" />, href: "#projects" },
-    {
-      title: "Experience",
-      icon: <Layers3Icon className="h-4 w-4" />,
-      href: "#experience",
     },
     {
       title: "Contact",

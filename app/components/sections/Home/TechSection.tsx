@@ -208,11 +208,6 @@ const techCategories = [
         logo: techLogos.zustand,
         why: "Lightweight global state without boilerplate",
       },
-      {
-        name: "Supabase",
-        logo: techLogos.supabase,
-        why: "Real-time database with built-in auth",
-      },
     ],
   },
   {
@@ -225,11 +220,11 @@ const techCategories = [
         logo: techLogos.testingLibrary,
         why: "User-centric component testing",
       },
-      {
-        name: "Playwright",
-        logo: techLogos.playwright,
-        why: "Reliable end-to-end testing across browsers",
-      },
+      // {
+      //   name: "Playwright",
+      //   logo: techLogos.playwright,
+      //   why: "Reliable end-to-end testing across browsers",
+      // },
       {
         name: "Lighthouse",
         logo: techLogos.lighthouse,
@@ -296,13 +291,13 @@ const TechCategory = ({
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className={`rounded-3xl border ${scheme.border} ${scheme.bg} p-6 transition-all duration-300 ${scheme.hoverBorder} dark:border-white/10 dark:bg-neutral-900/50`}
+      className={`rounded-3xl border ${scheme.border} ${scheme.bg} p-6 transition-all duration-300 ${scheme.hoverBorder} dark:border-white/10 dark:bg-neutral-900/50 dark:shadow-[0_0_20px_rgba(16,185,129,0.1)]`}
     >
       <div className="mb-4">
         <h3 className={`text-xl font-semibold ${scheme.text}`}>
           {category.name}
         </h3>
-        <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
           {category.description}
         </p>
       </div>
@@ -315,7 +310,7 @@ const TechCategory = ({
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.3, delay: index * 0.1 + 0.2 + i * 0.05 }}
             whileHover={{ y: -4, scale: 1.05 }}
-            className="group relative flex flex-col items-center gap-2 rounded-2xl border border-black/5 bg-white/80 p-4 text-center transition-all duration-300 hover:border-black/10 hover:shadow-lg dark:border-white/10 dark:bg-neutral-800/50 dark:hover:border-white/20"
+            className="group relative flex flex-col items-center gap-2 rounded-2xl border border-black/5 bg-white/80 p-4 text-center transition-all duration-300 hover:border-black/10 hover:shadow-lg dark:border-white/10 dark:bg-neutral-800/50 dark:shadow-[0_0_15px_rgba(16,185,129,0.15)] dark:hover:border-emerald-500/30 dark:hover:shadow-[0_0_25px_rgba(16,185,129,0.25)]"
           >
             {/* Tooltip */}
             <div className="pointer-events-none absolute -top-2 left-1/2 z-10 w-48 -translate-x-1/2 -translate-y-full rounded-lg border border-black/10 bg-white px-3 py-2 text-xs text-neutral-700 opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 dark:border-white/20 dark:bg-neutral-800 dark:text-neutral-200">
@@ -339,7 +334,7 @@ const TechCategory = ({
 const TechSection = () => {
   return (
     <SectionReveal variant="fadeLeft">
-      <section id="tech" className="w-full px-4 pb-16 md:pb-28">
+      <section id="tech" className="w-full px-4 py-12 md:pb-28">
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-4 text-center">
           <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
             Technologies & Tools
@@ -347,7 +342,7 @@ const TechSection = () => {
           <h2 className="text-3xl font-semibold text-gray-900 dark:text-white md:text-4xl">
             My frontend development toolkit
           </h2>
-          <p className="text-base text-neutral-600 dark:text-neutral-400">
+          <p className="text-base text-neutral-600 dark:text-neutral-300">
             The technologies I use to build fast, accessible, and maintainable
             web applications.
           </p>

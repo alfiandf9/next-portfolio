@@ -163,7 +163,7 @@ const Experience = () => {
   return (
     <GridBackground>
       <SectionReveal variant="fadeUp">
-        <section id="experience" className="w-full px-4 py-20">
+        <section id="experience" className="w-full px-4 py-12 md:py-20">
           <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-4 text-center">
             <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
               Experience

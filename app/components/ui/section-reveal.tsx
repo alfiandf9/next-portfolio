@@ -21,11 +21,14 @@ const variantMap: Record<
     animate: Record<string, number | string>;
   }
 > = {
-  fadeUp: { initial: { opacity: 0, y: 40 }, animate: { opacity: 1, y: 0 } },
-  fadeDown: { initial: { opacity: 0, y: -40 }, animate: { opacity: 1, y: 0 } },
-  fadeLeft: { initial: { opacity: 0, x: 60 }, animate: { opacity: 1, x: 0 } },
-  fadeRight: { initial: { opacity: 0, x: -60 }, animate: { opacity: 1, x: 0 } },
-  scale: { initial: { opacity: 0, scale: 0.9 }, animate: { opacity: 1, scale: 1 } },
+  fadeUp: { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } },
+  fadeDown: { initial: { opacity: 0, y: -20 }, animate: { opacity: 1, y: 0 } },
+  fadeLeft: { initial: { opacity: 0, x: 30 }, animate: { opacity: 1, x: 0 } },
+  fadeRight: { initial: { opacity: 0, x: -30 }, animate: { opacity: 1, x: 0 } },
+  scale: {
+    initial: { opacity: 0, scale: 0.95 },
+    animate: { opacity: 1, scale: 1 },
+  },
 };
 
 export const SectionReveal = ({
@@ -39,8 +42,8 @@ export const SectionReveal = ({
     <motion.div
       initial={motionVariant.initial}
       whileInView={motionVariant.animate}
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.7, delay, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.4, delay, ease: "easeOut" }}
       className={cn("w-full", className)}
     >
       {children}
