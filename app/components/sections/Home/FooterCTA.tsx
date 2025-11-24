@@ -23,7 +23,7 @@ const FooterCTA = () => {
               Say hello
             </a>
             <a
-              href="/files/Muhammad-Alfian-CV.pdf"
+              href="/files/cv_muhammad_alfian_df.pdf"
               download
               className="rounded-full bg-emerald-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
             >
