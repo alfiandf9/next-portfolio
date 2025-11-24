@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Calendar, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
-import { MapPin, Mail, Calendar } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 import { SectionReveal } from "@/app/components/ui/section-reveal";
 
