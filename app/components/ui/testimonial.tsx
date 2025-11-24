@@ -38,7 +38,7 @@ export const AnimatedTestimonials = ({
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, []);
 
   const rotationValues = useMemo(
     () => testimonials.map((_, idx) => ((idx % 5) - 2) * 4),

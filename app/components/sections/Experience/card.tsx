@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { BorderBeam } from "@/components/magicui/border-beam";
+import { useEffect, useId, useRef, useState } from "react";
 
 export function ExpandableCard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -128,7 +127,7 @@ export function ExpandableCard() {
       </AnimatePresence>
 
       <ul className="mx-auto w-[800px] space-y-4 gap-4">
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}

@@ -2,7 +2,6 @@ import Experience from "@/components/sections/Experience/Experience";
 import Projects from "@/components/sections/Projects/Project";
 import CapabilitiesSection from "./components/sections/Home/CapabilitiesSection";
 import DockControls from "./components/sections/Home/DockControls";
-import Endorsements from "./components/sections/Home/Endorsements";
 import FooterCTA from "./components/sections/Home/FooterCTA";
 import HeroSection from "./components/sections/Home/HeroSection";
 import NextUpSection from "./components/sections/Home/NextUpSection";
@@ -36,10 +35,7 @@ export default function Home() {
 
       {/* What's Next Section */}
       <NextUpSection />
-
-      {/* Endorsements Section */}
-      {/* <Endorsements /> */}
-
+      
       {/* Footer CTA */}
       <FooterCTA />
 

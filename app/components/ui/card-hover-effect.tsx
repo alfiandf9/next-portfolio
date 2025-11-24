@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useRef, useState } from "react";
+import { ReactNode, SetStateAction, useRef, useState } from "react";
 import {
   AnimatePresence,
   motion,
@@ -146,7 +146,7 @@ const HoverCard = ({ item, index }: { item: CardHoverItem; index: number }) => {
             ].map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id as SetStateAction<"focus" | "approach" | "outcomes">)}
                 className={cn(
                   "flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors",
                   activeTab === tab.id

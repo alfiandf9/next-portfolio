@@ -50,7 +50,7 @@ const ProfileSection = () => {
                 before I code—making sure the foundation is solid.
               </p>
               <p>
-                Off the keyboard, I'm gaming, walking the city, hunting street
+                Off the keyboard, I&apos;m gaming, walking the city, hunting street
                 food, or just chilling and enjoying the moment.
               </p>
             </div>

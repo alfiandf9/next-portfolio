@@ -246,11 +246,11 @@ const Projects = () => {
             Selected Work
           </p>
           <h2 className="text-3xl font-semibold text-gray-900 dark:text-white md:text-4xl">
-            Projects I've built
+            Projects I&apos;ve built
           </h2>
           <p className="text-base text-neutral-600 dark:text-neutral-400">
             Most of my work involves internal tools and client projects under
-            NDA. Here's what I can share about my contributions and the
+            NDA. Here&apos;s what I can share about my contributions and the
             technologies I used.
           </p>
         </div>

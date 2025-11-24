@@ -3,15 +3,13 @@
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "motion/react";
 import {
   GlobeIcon,
-  LucideShieldQuestion,
-  MessageCircleQuestionIcon,
   MoonIcon,
   SunIcon,
-  XIcon,
+  XIcon
 } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 const languages = [
   { value: "en", label: "English" },
