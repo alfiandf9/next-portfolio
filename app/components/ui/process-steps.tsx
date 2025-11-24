@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion, type Variants } from "motion/react";
 
 type Step = {
   title: string;
@@ -14,7 +14,7 @@ export const ProcessSteps = ({ steps }: { steps: Step[] }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const reduceMotion = useReducedMotion();
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     show: {
       transition: {
@@ -24,7 +24,7 @@ export const ProcessSteps = ({ steps }: { steps: Step[] }) => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: reduceMotion ? 0 : 12 },
     show: {
       opacity: 1,
