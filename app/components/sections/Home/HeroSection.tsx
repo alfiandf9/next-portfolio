@@ -44,12 +44,12 @@ const HeroSection = () => {
               className="pointer-events-none absolute inset-[-6px] flex items-center justify-center"
             >
               <div className="absolute inset-0 rounded-full bg-[conic-gradient(at_50%_50%,#34d399_0deg,#0ea5e9_120deg,#a855f7_240deg,#34d399_360deg)] opacity-35 md:opacity-50 md:animate-[spin_18s_linear_infinite] motion-reduce:animate-none" />
-              <div className="absolute inset-[10px] rounded-full bg-white/65 blur-[6px] dark:bg-neutral-950/65 md:blur-[8px]" />
+              <div className="absolute inset-[10px] rounded-full bg-white/65 blur-[6px] dark:bg-neutral-950/65 md:blur-sm" />
             </div>
             <div className="relative h-full w-full overflow-hidden rounded-full border-8 border-transparent bg-white/60 ring-2 ring-emerald-200/60 shadow-[0_20px_60px_-25px_rgba(16,185,129,0.4)] backdrop-blur-sm dark:bg-neutral-900/60 dark:ring-emerald-300/35">
               <Image
                 src={"/images/portrait.png"}
-                alt="my-portrait"
+                alt="Muhammad Alfian - Frontend Developer portrait"
                 fill
                 sizes="(max-width: 768px) 192px, 288px"
                 priority

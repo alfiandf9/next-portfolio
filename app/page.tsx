@@ -1,5 +1,5 @@
-import Experience from "@/components/sections/Experience/Experience";
-import Projects from "@/components/sections/Projects/Project";
+import Experience from "./components/sections/Experience/Experience";
+import Projects from "./components/sections/Projects/Project";
 import CapabilitiesSection from "./components/sections/Home/CapabilitiesSection";
 import DockControls from "./components/sections/Home/DockControls";
 import FooterCTA from "./components/sections/Home/FooterCTA";
@@ -11,7 +11,7 @@ import TechSection from "./components/sections/Home/TechSection";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col w-full min-h-lvh">
+    <main className="relative flex flex-col w-full min-h-lvh">
       {/* Hero Section */}
       <HeroSection />
 
@@ -35,11 +35,11 @@ export default function Home() {
 
       {/* What's Next Section */}
       <NextUpSection />
-      
+
       {/* Footer CTA */}
       <FooterCTA />
 
       <DockControls />
-    </div>
+    </main>
   );
 }
