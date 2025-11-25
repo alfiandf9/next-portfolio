@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Muhammad Alfian - Portfolio
 
-## Getting Started
+A modern, responsive portfolio website showcasing my work as a Frontend Developer, built with Next.js 15 and TypeScript.
 
-First, run the development server:
+🔗 **Live Site:** [alfiandf-portfolio.vercel.app](https://alfiandf-portfolio.vercel.app)
+
+## 🚀 Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Heroicons, icons8
+- **Deployment:** Vercel
+
+## ✨ Features
+
+- 🎨 Modern, clean design with dark mode support
+- ⚡ Optimized performance with Next.js Image optimization
+- 📱 Fully responsive across all devices
+- ♿ Accessible with semantic HTML and ARIA labels
+- 🔍 SEO optimized with Open Graph tags and structured data
+- 🎭 Smooth animations and transitions
+- 📊 Interactive sections showcasing experience, projects, and skills
+
+## 📂 Project Structure
+
+```
+next-portfolio/
+├── app/
+│   ├── components/
+│   │   ├── sections/       # Page sections (Hero, Experience, Projects, etc.)
+│   │   ├── ui/             # Reusable UI components
+│   │   └── magicui/        # Special effect components
+│   ├── layout.tsx          # Root layout with metadata
+│   ├── page.tsx            # Home page
+│   ├── robots.ts           # SEO robots configuration
+│   └── sitemap.ts          # Dynamic sitemap generation
+├── public/
+│   ├── icons/              # Icon assets
+│   └── images/             # Image assets
+└── lib/                    # Utility functions and fonts
+```
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/alfiandf9/next-portfolio.git
+cd next-portfolio
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📄 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 SEO Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Comprehensive metadata with Open Graph and Twitter Cards
+- JSON-LD structured data (Person and WebSite schemas)
+- Dynamic sitemap generation
+- Robots.txt configuration
+- Google Search Console verification
+- Optimized for search engine crawling
 
-## Deploy on Vercel
+## 📧 Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Email:** alfian.fantara@gmail.com
+- **LinkedIn:** [Muhammad Alfian Dwi Fantara](https://www.linkedin.com/in/malfiandf/)
+- **GitHub:** [@alfiandf9](https://github.com/alfiandf9)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ by Muhammad Alfian
