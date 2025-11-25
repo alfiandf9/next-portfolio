@@ -47,6 +47,10 @@ export default function StructuredData() {
 
   return (
     <>
+      <meta
+        name="google-site-verification"
+        content="w3Nt-N-xWU6C6olbI2lKW_Grgr0J5lD8O2AdPZVklNE"
+      />
       <Script
         id="person-schema"
         type="application/ld+json"
