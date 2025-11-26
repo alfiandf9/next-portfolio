@@ -77,6 +77,7 @@ const FloatingDockMobile = ({
                 {item.href ? (
                   <a
                     href={item.href}
+                    aria-label={item.title}
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                   >
                     <div className="h-4 w-4">{item.icon}</div>
@@ -84,6 +85,7 @@ const FloatingDockMobile = ({
                 ) : (
                   <button
                     onClick={item.onClick}
+                    aria-label={item.title}
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                   >
                     <div className="h-4 w-4">{item.icon}</div>
@@ -96,6 +98,7 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
+        aria-label={open ? "Close navigation" : "Open navigation"}
         className={`flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800 transition-transform duration-300 ease-in-out ${
           open ? "rotate-180 scale-110" : "rotate-0 scale-100"
         }`}
@@ -195,7 +198,7 @@ function IconContainer({
 
   if (href) {
     return (
-      <a href={href}>
+      <a href={href} aria-label={title}>
         <motion.div
           ref={ref}
           style={{ width, height }}
@@ -227,7 +230,7 @@ function IconContainer({
   }
 
   return (
-    <button onClick={onClick}>
+    <button aria-label={title} onClick={onClick}>
       <motion.div
         ref={ref}
         style={{ width, height }}

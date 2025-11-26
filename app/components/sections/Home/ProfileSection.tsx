@@ -5,12 +5,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { SectionReveal } from "@/app/components/ui/section-reveal";
+import profile1 from "@/public/images/profile-optimized-640.jpg";
+import profile2 from "@/public/images/profile-2-optimized-640.jpg";
+import profile3 from "@/public/images/profile-3-optimized-640.jpg";
 
-const profileImages = [
-  "/images/profile.jpg",
-  "/images/profile-2.jpg",
-  "/images/profile-3.jpg",
-];
+const profileImages = [profile1, profile2, profile3];
 
 const ProfileSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -36,7 +35,7 @@ const ProfileSection = () => {
               {/* Preload all images */}
               {profileImages.map((src, index) => (
                 <div
-                  key={src}
+                  key={src.src}
                   className={`absolute inset-0 transition-opacity duration-700 ${
                     index === currentImage ? "opacity-100" : "opacity-0"
                   }`}
@@ -46,9 +45,11 @@ const ProfileSection = () => {
                     alt="Muhammad Alfian Dwi Fantara"
                     fill
                     className="object-cover"
-                    quality={95}
+                    quality={92}
                     sizes="(max-width: 768px) 100vw, 384px"
-                    priority
+                    placeholder="blur"
+                    priority={index === currentImage}
+                    loading={index === currentImage ? "eager" : "lazy"}
                   />
                 </div>
               ))}

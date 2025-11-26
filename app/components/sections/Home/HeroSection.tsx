@@ -4,6 +4,7 @@ import { AnimatedTooltip } from "@/app/components/ui/animated-tooltip";
 import { DotBackground } from "@/app/components/ui/dot-background";
 import { SectionReveal } from "@/app/components/ui/section-reveal";
 import { TextGenerateEffect } from "@/app/components/ui/text-generate-effect";
+import portraitLarge from "@/public/images/portrait-optimized-512.jpg";
 import { jura } from "@/lib/font";
 
 const heroIcon = [
@@ -48,12 +49,15 @@ const HeroSection = () => {
             </div>
             <div className="relative h-full w-full overflow-hidden rounded-full border-8 border-transparent bg-white/60 ring-2 ring-emerald-200/60 shadow-[0_20px_60px_-25px_rgba(16,185,129,0.4)] backdrop-blur-sm dark:bg-neutral-900/60 dark:ring-emerald-300/35">
               <Image
-                src={"/images/portrait.png"}
+                src={portraitLarge}
                 alt="Muhammad Alfian - Frontend Developer portrait"
                 fill
                 sizes="(max-width: 768px) 192px, 288px"
+                placeholder="blur"
+                quality={85}
                 priority
-                objectFit="cover"
+                fetchPriority="high"
+                className="object-cover"
               />
             </div>
           </div>
@@ -78,7 +82,7 @@ const HeroSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
               href="#projects"
-              className="group relative overflow-hidden rounded-full bg-emerald-600 px-6 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-emerald-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+              className="group relative overflow-hidden rounded-full bg-emerald-700 px-6 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-emerald-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
             >
               <span className="pointer-events-none absolute inset-[-3px] rounded-full bg-[conic-gradient(at_50%_50%,rgba(52,211,153,0.6),rgba(14,165,233,0.5),rgba(168,85,247,0.5),rgba(52,211,153,0.6))] opacity-0 blur-[10px] transition duration-300 group-hover:opacity-100 dark:opacity-70 motion-reduce:hidden" />
               <span className="relative">View Projects</span>
