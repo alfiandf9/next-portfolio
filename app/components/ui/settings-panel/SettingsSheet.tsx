@@ -55,6 +55,7 @@ export const SettingsSheet = ({ open, onClose }: SettingsSheetProps) => {
                 </h3>
                 <button
                   onClick={onClose}
+                  aria-label="Close settings"
                   className="rounded-full border border-neutral-200 p-2 text-neutral-500 hover:border-neutral-400 dark:border-neutral-800 dark:text-neutral-200"
                 >
                   <XIcon className="h-4 w-4" />
